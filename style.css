@@ -1,0 +1,101 @@
+*{      /*    this is universal selectors it is considered as good practice  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: 100vh;  /* wrapper universal parent hai iss pure website ka , usska height i want to put height of the viewport of screen so yeh hota hai vieport ka size learn it */
+    overflow-y: auto; /* this is done to flow noramlly scrolling in y axis */
+    overflow-x: hidden;/* this is done not to flow scrolling in x axis direction*/
+    perspective: 20px; /*  this commanad is used to open the perspective, simply to open the window ki we are going to use 3d z axies used hoga ddd*/ 
+     
+}
+
+.container{
+    position: relative;   /*homework: kya z index dalne ki jaroorat hai*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;    /* homework: kya z index dalne ki jaroorat hai*/
+}
+
+.background{
+    transform: translateZ(-79px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(2);
+}
+.background, .foreground{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+h1{
+    position: relative;
+    top: -10rem;
+    font-size: 6rem;
+    color: white;
+    letter-spacing: 4px;
+    transform:translate X(-50%);
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color:white;
+    padding: 5rem 0;
+}
+
+
+.secheading{
+    font-size: 5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.description{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 40%;
+    left: 60%;
+    transform: translateX(-50%) translateX(-50%);
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+
+}
+
+.bg1{
+    background-image: url(sport-1.jpg);
+
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+
+}
+
